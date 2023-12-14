@@ -13,7 +13,7 @@ def stretch(image):
     return (image - np.min(image)) / (np.max(image) - np.min(image)) * 255.0
 
 # Read the binary file
-file_path = '../image/salesmanbin.sec'
+file_path = ('img/hw5/salesman.bin')
 size = 256
 X = read_bin(file_path, size)
 
@@ -55,6 +55,7 @@ Y1a = Y
 
 
 # Make the 128x128 impulse response image
+
 plt.figure(figsize=(12, 6))
 plt.subplot(2, 4, 1)
 plt.imshow(X, cmap='gray')
@@ -163,7 +164,6 @@ H1[126:133, 126:133] = 1/49
 
 # Get the true zero-phase impulse response image using fftshift
 H2 = np.fft.fftshift(H1)
-print(H2.shape)
 
 
 # Display the zero-phase impulse response image
@@ -210,5 +210,10 @@ plt.title('Final Filtered Image', fontsize=18)
 plt.axis('image')
 plt.axis('off')
 plt.show()
+
+
+
+
+
 
 
