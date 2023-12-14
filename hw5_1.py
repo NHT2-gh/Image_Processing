@@ -18,7 +18,7 @@ st.title("HW5.1-N20DCCN142")
 tab1,tab2,tab3 = st.tabs(["1.A", "1.B", "1.C"])
 
 with tab1:
-    st.subheader("a.")
+    st.subheader("")
     col1, col2 = st.columns(2)
     with col1:
         st.image(input_image, use_column_width=True, channels="L", caption="Original Image")
@@ -59,7 +59,7 @@ Y = np.real(ZPY[64:320, 64:320])
 cv2.imwrite("img/hw5/tmp2.jpg", Y)
 #Display result
 with tab2:
-    st.subheader("b.")
+    st.subheader("")
     b1,b2,b3 = st.columns(3)
     with b1:
         st.image(input_image,  use_column_width=True, channels="L", caption="Original Image")
